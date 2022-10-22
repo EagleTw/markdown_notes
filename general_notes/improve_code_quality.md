@@ -31,20 +31,21 @@
       std::string tableName;   // Bad - mixed case.
       ```
 
-  * Class Data Members
-    * with a ***trailing underscore***
+    * Class Data Members
+      * with a ***trailing underscore***
 
-      ```C++
-      class TableInfo {
-        ...
-      private:
-        std::string table_name_;  // OK - underscore at end.
-        static Pool<TableInfo>* pool_;  // OK.
-      };
-      ```
+        ```C++
+        class TableInfo {
+          ...
+        private:
+          std::string table_name_;  // OK - underscore at end.
+          static Pool<TableInfo>* pool_;  // OK.
+        };
+        ```
 
-  * Struct Data Members
-    * DONT need underscore
+    * Struct Data Members
+      * DONT need underscore
+
   * Constant Names
     * Leading with k...
     * Example: `const int kDaysInAWeek = 7;`
@@ -61,6 +62,19 @@
   * Function
     * With mix cases
     * Example: `AddOne()`, `CheckSum`
-  * 
+  * Macro Names
+    * In general, **it should not be used**
 
+    ```C++
+    #define ROUND(x) ...
+    #define PI_ROUNDED 3.0
+    ```
+  * Comments
+    * File comments
+    * Class comments
+    * Function comment
+    * Variable comments
+      * Global variable
+      * Class Data Members
+    * Implementation Comments
 
