@@ -34,19 +34,14 @@ Programming is a form of art
     B--> |Output| C[Human/Computer]
   ```
 
-* 能在 ==電腦== 上執行 ==特定任務== 的 一連串的機器 ==指令==
+* 能在**電腦**上執行**特定任務**的一連串的機器**指令**
 
 ### What is programming?
 
 * "Programming is like building a world from atoms"
+* 程式 = 資料 + 運算邏輯
 
-### Ok! What is atom?
-
-* Code (Text) is the atom
-* If else
-
-
-## Hands on
+## 資料 Hands on
 
 ### Environment
 
