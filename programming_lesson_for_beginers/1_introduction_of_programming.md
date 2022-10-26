@@ -43,8 +43,44 @@ Programming is a form of art
 ### Ok! What is atom?
 
 * Code (Text) is the atom
-* 
-
 * If else 
 
-### Computational thinking
+
+## Hands on
+
+### Environment
+
+* What is python
+* Open vs code
+* Terminal
+* Run python3 in raw
+
+### Excercise 1 - Hello World
+
+* Know develop flow
+* Goal know print
+* Start to read debugging message
+
+```python3
+print("Hello world")
+```
+
+### Excercise 2 - Type and Identifier
+
+
+```python3
+
+a = 0;
+b = 1.0
+c = "Hello"
+
+print("Type:", type(a), type(b), type(c))
+```
+
+### Excercise 3 - Simple Calculator
+
+* `type()`
+* Data + Operand
+
+
+### Excercise 4 - Try it yourself
