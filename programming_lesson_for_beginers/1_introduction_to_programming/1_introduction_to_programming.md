@@ -26,6 +26,12 @@ Programming is a form of art
 
   [[ref]](https://www.google.com/search?q=programming&oq=programming+&aqs=chrome..69i57j69i61l3.3345j0j1&sourceid=chrome&ie=UTF-8)
 
+* Before Computer 
+
+  ![Before Computer](../Images/calculate_before_computer.jpeg)
+
+  [[ref]](https://medium.com/@mashinyire/letter-to-my-nephew-69674cbf4d98)
+
 ### What is a program?
 
   ```mermaid
