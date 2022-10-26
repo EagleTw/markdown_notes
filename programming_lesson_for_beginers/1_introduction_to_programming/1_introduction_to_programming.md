@@ -1,4 +1,4 @@
-# Class 1. Introduction of Programming
+# Class 1. Introduction to Programming
 
 ## About me 潘奕平
 
@@ -26,7 +26,7 @@ Programming is a form of art
 
   [[ref]](https://www.google.com/search?q=programming&oq=programming+&aqs=chrome..69i57j69i61l3.3345j0j1&sourceid=chrome&ie=UTF-8)
 
-* A more simpler explaination
+### What is a program?
 
   ```mermaid
   graph TD
@@ -34,7 +34,7 @@ Programming is a form of art
     B--> |Output| C[Human/Computer]
   ```
 
-*
+* 能在 ==電腦== 上執行 ==特定任務== 的 一連串的機器 ==指令==
 
 ### What is programming?
 
