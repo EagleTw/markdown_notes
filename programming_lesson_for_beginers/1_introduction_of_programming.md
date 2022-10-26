@@ -67,6 +67,8 @@ print("Hello world")
 
 ### Excercise 2 - Type and Identifier
 
+* Operand `=` usage
+* Identifier is a drawer
 
 ```python3
 
@@ -74,7 +76,8 @@ a = 0;
 b = 1.0
 c = "Hello"
 
-print("Type:", type(a), type(b), type(c))
+print("Value:", a, b, c)
+print("Type: ", type(a), type(b), type(c))
 ```
 
 ### Excercise 3 - Simple Calculator
