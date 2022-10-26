@@ -4,7 +4,7 @@
 
 * 現仼 Synopsys 軟體工程師 (編譯器工程師)
 * Risc-V emulate (rv32emu) 開源貢獻者
-  ![ypprog_github](Images/ypprog_github.png)
+  ![ypprog_github](../Images/ypprog_github.png)
 * 2022 台積電 CareerHack 比賽第二名
 * 2022 Inter DevCup 進入決賽 (進入中)
 
@@ -12,7 +12,7 @@
 
 Programming is a form of art
 
-![programming is art](Images/programming_is_art.png)
+![programming is art](../Images/programming_is_art.png)
 
 [[ref]](https://sites.google.com/site/computers4creativity/about/programming-art-math)
 
@@ -34,7 +34,7 @@ Programming is a form of art
     B--> |Output| C[Human/Computer]
   ```
 
-* 
+*
 
 ### What is programming?
 
@@ -43,7 +43,7 @@ Programming is a form of art
 ### Ok! What is atom?
 
 * Code (Text) is the atom
-* If else 
+* If else
 
 
 ## Hands on
@@ -84,6 +84,5 @@ print("Type: ", type(a), type(b), type(c))
 
 * `type()`
 * Data + Operand
-
 
 ### Excercise 4 - Try it yourself
