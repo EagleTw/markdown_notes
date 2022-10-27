@@ -67,6 +67,8 @@ Programming is a form of art
 * Know develop flow
 * Goal know print
 * Start to read debugging message
+* Learn how to output - 
+  * [prinfYour Guide to the Python print() Function](https://realpython.com/python-print/)
 
 ```python3
 print("Hello world")
