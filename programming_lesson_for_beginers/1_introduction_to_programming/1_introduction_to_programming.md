@@ -14,6 +14,8 @@
 
 ### What is a computer?
 
+* 電腦 (中國: 計算機)
+
 * Definition
 
   > A computer is a programmable device that stores, retrieves, and processes data. The term "computer" was originally given to humans (human computers) who performed numerical calculations using mechanical calculators, such as the abacus and slide rule. The term was later given to mechanical devices as they began replacing human computers. Today's computers are electronic devices that accept data (input), process that data, produce output, and store (storage) the results (IPOS).
@@ -24,7 +26,7 @@
   如何減少人力的使用，快速的完成本來要做的事。
 * 推薦電影: Alan Turing: The Enigma <模仿遊戲>
   * 電腦發明者的故事
-* Before Computer
+* Before Computer \
   ![Before Computer](../Images/calculate_before_computer.jpeg)
 
   [[ref]](https://medium.com/@mashinyire/letter-to-my-nephew-69674cbf4d98)
@@ -55,7 +57,7 @@ Programming is a form of art\
 ### Environment
 
 * What is python
-* Open vs code
+* Open vscode
 * Terminal
 * Run python3 in raw
 
