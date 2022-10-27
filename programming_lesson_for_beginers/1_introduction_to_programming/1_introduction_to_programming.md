@@ -53,7 +53,7 @@ Programming is a form of art
 * "Programming is like building a world from atoms"
 * 程式 = 資料 + 運算邏輯
 
-## 資料 Hands on
+## 資料 Hands on - 動手做
 
 ### Environment
 
@@ -96,7 +96,7 @@ print("create a world")
 print("by code.")
 ```
 
-### Excercise 2 - Type and Identifier
+### Excercise 2 - Type and Identifier - 資料
 
 * Operand `=` usage
 * Identifier is like a drawer
@@ -164,7 +164,7 @@ print("The sum is {}".format(c))
 
 ### Excercise 5 - Count to 10
 
-For loop - range
+For loop - range(start, stop [,step])
 
 ```python3
 for i in range(1,10):
