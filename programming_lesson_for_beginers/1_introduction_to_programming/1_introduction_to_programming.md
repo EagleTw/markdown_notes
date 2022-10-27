@@ -67,7 +67,7 @@ Programming is a form of art
 * Know develop flow
 * Goal know print
 * Start to read debugging message
-* Learn how to output - 
+* Learn how to output
   * [prinfYour Guide to the Python print() Function](https://realpython.com/python-print/)
 
 ```python3
@@ -138,7 +138,7 @@ print("c is", c, "and d is", d)
 print("c is {} and d is {}".format(c, d))
 ```
 
-### Excercise 4 - Odd or Even - If statement 
+### Excercise 4 - Odd or Even - If statement
 
 ### Excercise 5 - Count to 10
 
