@@ -111,6 +111,9 @@ print("Value:", a, b, c, d)
 print("Type: ", type(a), type(b), type(c), true(d))
 ```
 
+* Python data type
+  * [Python 初學第二講 — 資料型態與轉換](https://medium.com/ccclub/ccclub-python-for-beginners-tutorial-d26900b9280e)
+
 Same as
 
 ```python3
@@ -127,6 +130,18 @@ print("Type: ", type(a), type(b), type(c), type(d))
 
 * `type()`
 * Data + Operand
+
+#### Operator
+
+* Unary operator
+  * 取正號 `+`
+  * 取負好 `-`
+* Binary operator
+  * `+`, `-`, `*`
+  * 浮點數除法 `/`
+  * 整數除法 `//`
+  * 取餘數 `%`
+* [認識運算子](https://www.dotblogs.com.tw/YiruAtStudio/2020/12/30/192744)
 
 ```python3
 a = 1
