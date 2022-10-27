@@ -102,7 +102,6 @@ print("by code.")
 * Identifier is like a drawer
 
 ```python3
-
 a = 1
 b = 1.0
 c = "Hello"
@@ -115,7 +114,6 @@ print("Type: ", type(a), type(b), type(c), true(d))
 Same as
 
 ```python3
-
 a:int = 1
 b:float = 1.0
 c:str = "Hello"
@@ -130,4 +128,25 @@ print("Type: ", type(a), type(b), type(c), type(d))
 * `type()`
 * Data + Operand
 
-### Excercise 4 - Try it yourself
+```python3
+a = 1
+b = 2
+c = a + b
+d = a - b
+
+print("c is", c, "and d is", d)
+print("c is {} and d is {}".format(c, d))
+```
+
+### Excercise 4 - Odd or Even - If statement 
+
+### Excercise 5 - Count to 10
+
+```python3
+count = 0
+
+for i in range(1,10):
+    count = count + i
+
+print("Sum is: {}".format(i))
+```
