@@ -10,12 +10,6 @@
 
 ## Programming
 
-Programming is a form of art
-
-![programming is art](../Images/programming_is_art.png)
-
-[[ref]](https://sites.google.com/site/computers4creativity/about/programming-art-math)
-
 ## Programming Introduction
 
 ### What is a computer?
@@ -32,6 +26,7 @@ Programming is a form of art
   * 電腦發明者的故事
 * Before Computer
   ![Before Computer](../Images/calculate_before_computer.jpeg)
+
   [[ref]](https://medium.com/@mashinyire/letter-to-my-nephew-69674cbf4d98)
 
 ### What is a program?
@@ -45,6 +40,12 @@ Programming is a form of art
 * 能在**電腦**上執行**特定任務**的一連串的機器**指令**
 
 ### What is programming?
+
+Programming is a form of art\
+
+![programming is art](../Images/programming_is_art.png)
+
+[[ref]](https://sites.google.com/site/computers4creativity/about/programming-art-math)
 
 * "Programming is like building a world from atoms"
 * 程式 = 資料 + 運算邏輯
