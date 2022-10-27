@@ -71,8 +71,8 @@ Programming is a form of art
   * [prinfYour Guide to the Python print() Function](https://realpython.com/python-print/)
 
 ```python3
+# This is a comment, will not execute
 print("Hello world")
-
 print('Hello world')
 ```
 
@@ -148,15 +148,15 @@ name = input()
 print("Hi {}, good day isn't it?".format(name))
 ```
 
-* intput type will be str, check with `type()`
+* **intput type will be str, check with `type()`**
 * how to transfer to interger? `int()`
 
 Adder
 
 ```python3
-a = int(input("Input a number"))
-b = int(input("Input another number"))
-c = a + b
+a = input("Input a number: ")
+b = input("Input another number: ")
+c = int(a) + int(b)
 print("The sum is {}".format(c))
 ```
 
