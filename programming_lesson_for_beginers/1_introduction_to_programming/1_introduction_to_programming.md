@@ -6,7 +6,7 @@
 * Risc-V emulate (rv32emu) 開源貢獻者
   ![ypprog_github](../Images/ypprog_github.png)
 * 2022 台積電 CareerHack 比賽第二名
-* 2022 Inter DevCup 進入決賽 (進入中)
+* 2022 Inter DevCup 進入決賽 (比賽中)
 
 ## Programming
 

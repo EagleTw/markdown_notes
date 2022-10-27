@@ -28,3 +28,8 @@ python3 --version
 ```bash
 brew install --cask visual-studio-code
 ```
+
+1. Open Visual Studio Code
+2. Open the command pallette with Command + Shift + P (or F1)
+3. Type Shell in command palette
+4. Select Shell Command: Install code in PATH from suggested list
