@@ -142,12 +142,23 @@ Take user input
 
 ```python3
 print("Whats your name?")
-name = input
+name = input()
+# name = input("What is your name?")
+
 print("Hi {}, good day isn't it?".format(name))
 ```
 
 * intput type will be str, check with `type()`
 * how to transfer to interger? `int()`
+
+Adder
+
+```python3
+a = int(input("Input a number"))
+b = int(input("Input another number"))
+c = a + b
+print("The sum is {}".format(c))
+```
 
 ### Excercise 4 - Odd or Even - If statement
 
