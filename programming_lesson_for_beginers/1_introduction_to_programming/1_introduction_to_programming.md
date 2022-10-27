@@ -142,11 +142,22 @@ print("c is {} and d is {}".format(c, d))
 
 ### Excercise 5 - Count to 10
 
+For loop - range
+
+```python3
+for i in range(1,10):
+    print("i is: {}".format(i))
+```
+
+Count to 10
+
+* How to debug? Print information
+
 ```python3
 count = 0
 
 for i in range(1,10):
     count = count + i
 
-print("Sum is: {}".format(i))
+print("Sum is: {}".format(count))
 ```
