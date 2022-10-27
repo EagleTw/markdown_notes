@@ -131,6 +131,16 @@ print("Type: ", type(a), type(b), type(c), type(d))
 * `type()`
 * Data + Operand
 
+```python3
+a = 1
+b = 2
+c = a + b
+d = a - b
+
+print("c is", c, "and d is", d)
+print("c is {} and d is {}".format(c, d))
+```
+
 #### Operator
 
 * Unary operator
@@ -142,16 +152,6 @@ print("Type: ", type(a), type(b), type(c), type(d))
   * 整數除法 `//`
   * 取餘數 `%`
 * [認識運算子](https://www.dotblogs.com.tw/YiruAtStudio/2020/12/30/192744)
-
-```python3
-a = 1
-b = 2
-c = a + b
-d = a - b
-
-print("c is", c, "and d is", d)
-print("c is {} and d is {}".format(c, d))
-```
 
 Take user input
 
@@ -174,6 +174,17 @@ b = input("Input another number: ")
 c = int(a) + int(b)
 print("The sum is {}".format(c))
 ```
+
+### Do it by yourself - BMI Calculator
+
+* Input: 2 number
+  * 身高 cm
+  * 體重 kg
+
+* 輸出:
+  * BMI 值
+
+![bmi](../Images/bmi.png)
 
 ### Excercise 4 - Odd or Even - If statement
 
