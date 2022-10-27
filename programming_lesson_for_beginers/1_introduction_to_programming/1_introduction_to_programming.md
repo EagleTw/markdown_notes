@@ -29,6 +29,7 @@
 * Before Computer
 
   ![Before Computer](../Images/calculate_before_computer.jpeg)
+
   [[ref]](https://medium.com/@mashinyire/letter-to-my-nephew-69674cbf4d98)
 
 ### What is a program?
@@ -46,6 +47,7 @@
 Programming is a form of art
 
 ![programming is art](../Images/programming_is_art.png)
+
 [[ref]](https://sites.google.com/site/computers4creativity/about/programming-art-math)
 
 * "Programming is like building a world from atoms"
@@ -68,6 +70,28 @@ Programming is a form of art
 
 ```python3
 print("Hello world")
+
+print('Hello world')
+```
+
+Sequential execution
+
+```python3
+print("Hello world")
+print("Lets")
+print("create a world")
+print("by code.")
+```
+
+What is a identifier?
+
+```python3
+name = "ypprog"
+
+print("Hello ", name)
+print("Lets")
+print("create a world")
+print("by code.")
 ```
 
 ### Excercise 2 - Type and Identifier
