@@ -26,7 +26,7 @@
   如何減少人力的使用，快速的完成本來要做的事。
 * 推薦電影: Alan Turing: The Enigma <模仿遊戲>
   * 電腦發明者的故事
-* Before Computer\\
+* Before Computer\
   ![Before Computer](../Images/calculate_before_computer.jpeg)
   [[ref]](https://medium.com/@mashinyire/letter-to-my-nephew-69674cbf4d98)
 
@@ -42,7 +42,7 @@
 
 ### What is programming?
 
-Programming is a form of art\\
+Programming is a form of art\
 
 ![programming is art](../Images/programming_is_art.png)
 [[ref]](https://sites.google.com/site/computers4creativity/about/programming-art-math)
