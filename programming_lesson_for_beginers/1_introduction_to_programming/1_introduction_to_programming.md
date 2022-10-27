@@ -138,6 +138,17 @@ print("c is", c, "and d is", d)
 print("c is {} and d is {}".format(c, d))
 ```
 
+Take user input
+
+```python3
+print("Whats your name?")
+name = input
+print("Hi {}, good day isn't it?".format(name))
+```
+
+* intput type will be str, check with `type()`
+* how to transfer to interger? `int()`
+
 ### Excercise 4 - Odd or Even - If statement
 
 ### Excercise 5 - Count to 10
