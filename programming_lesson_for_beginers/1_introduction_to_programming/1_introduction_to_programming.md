@@ -90,7 +90,7 @@ What is a identifier?
 ```python3
 name = "ypprog"
 
-print("Hello ", name)
+print("Hello", name)
 print("Lets")
 print("create a world")
 print("by code.")
@@ -99,16 +99,30 @@ print("by code.")
 ### Excercise 2 - Type and Identifier
 
 * Operand `=` usage
-* Identifier is a drawer
+* Identifier is like a drawer
 
 ```python3
 
-a = 0;
+a = 1
 b = 1.0
 c = "Hello"
+d = true
 
-print("Value:", a, b, c)
-print("Type: ", type(a), type(b), type(c))
+print("Value:", a, b, c, d)
+print("Type: ", type(a), type(b), type(c), true(d))
+```
+
+Same as
+
+```python3
+
+a:int = 1
+b:float = 1.0
+c:str = "Hello"
+d:bool = true
+
+print("Value:", a, b, c, d)
+print("Type: ", type(a), type(b), type(c), type(d))
 ```
 
 ### Excercise 3 - Simple Calculator
