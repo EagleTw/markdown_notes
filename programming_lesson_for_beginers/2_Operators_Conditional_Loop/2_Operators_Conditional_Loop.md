@@ -5,7 +5,7 @@
 ### How to output
 
 * `print("Hello, world!, name)`
-* `print("Hello, world! {}".format(name))
+* `print("Hello, world! {}".format(name))`
 
 ### Data types
 
@@ -49,3 +49,11 @@ else:
 ```
 
 #### Excercise - Odd or Even
+
+**Check whether input number is even.**
+
+Hint:
+
+1. Take one input from keyboard
+2. Convert it to int
+3. Use if condition
