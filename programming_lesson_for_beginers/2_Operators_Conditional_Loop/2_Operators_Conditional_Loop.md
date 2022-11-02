@@ -42,7 +42,7 @@ If
 ```python!
 age = input("please input age")
 
-if (age < 12):
+if age < 12:
     print('kid')
 ```
 
@@ -56,7 +56,7 @@ if else
 ```python!
 age = input("please input age")
 
-if (age < 12):
+if age < 12:
     print('kid')
 else:
     print('not kid')
@@ -67,22 +67,79 @@ if, elif, else
 ```python!
 age = input("please input age")
 
-if (age < 12):
+if age < 12:
     print('kid')
-elif (age < 18):
+elif age < 18:
     print('teenager')
 else:
     print('adult')
 ```
 
-#### Excercise - Odd or Even
+#### Excercise 1 - x,y larger?
+
+:::info
+Goal: print out `x is less than y`, `x is greater than y`, `x is equal to y`
+:::
+
+```python!
+x = 7
+y = 10
+
+if x > y:
+    # Add print here
+elif x == y:
+    # Add print here
+else:
+    # Add print here
+```
+
+#### Excercise 2 - Same string
+
+:::info
+Goal: print out `x string is longer than y`, 
+`x str is shotter than y`, `x is greater than y`
+:::
+
+```python!
+x = "hello"
+y = "hello!" 
+
+if x == y:
+    print("x is identical to y")
+```
+
+:::warning
+Type is important --> int and str act differently
+:::
+
+#### Excercise 4 - Odd or Even
 
 :::info
 Goal: Check input number is even or odd
 :::
 
-Hint:
+Hint: what is the difference between odd and even?
 
-1. Take one input from keyboard
-2. Convert it to int
-3. Use if condition
+#### Excercise 5 - and, or
+
+Now we combine two things together
+
+```python!
+
+summer = True
+profession = "student"
+
+if summer == True:
+    if profession == "student": 
+        print("I have summer vacation")
+```
+
+Is equivalent to 
+
+```python!
+summer = True
+profession = "student"
+
+if summer == True and profession == "student":
+    print("I have summer vacation")
+```
