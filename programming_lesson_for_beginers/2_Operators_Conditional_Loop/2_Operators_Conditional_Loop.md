@@ -37,7 +37,34 @@ Keywords: `if`, `elif`, `else`
 
 #### Syntax - Age for example
 
-```python
+If
+
+```python!
+age = input("please input age")
+
+if (age < 12):
+    print('kid')
+```
+
+:::warning
+Take a look at indenting.\
+Python is a Whitespace Sensitive.
+:::
+
+if else
+
+```python!
+age = input("please input age")
+
+if (age < 12):
+    print('kid')
+else:
+    print('not kid')
+```
+
+if, elif, else
+
+```python!
 age = input("please input age")
 
 if (age < 12):
@@ -47,11 +74,6 @@ elif (age < 18):
 else:
     print('adult')
 ```
-
-:::warning
-Take a look at indenting.\
-Python is a Whitespace Sensitive.
-:::
 
 #### Excercise - Odd or Even
 
