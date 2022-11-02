@@ -40,7 +40,7 @@ Keywords: `if`, `elif`, `else`
 ```python
 age = input("please input age")
 
-if (age < 12):
+if (age < 12):       
     print('kid')
 elif (age < 18):
     print('teenager')
@@ -48,9 +48,16 @@ else:
     print('adult')
 ```
 
+:::warning
+Take a look at indenting.\
+Python is a Whitespace Sensitive.
+:::
+
 #### Excercise - Odd or Even
 
-**Check whether input number is even.**
+:::info
+Goal: Check input number is even or odd
+:::
 
 Hint:
 
