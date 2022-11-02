@@ -40,7 +40,7 @@ Keywords: `if`, `elif`, `else`
 ```python
 age = input("please input age")
 
-if (age < 12):       
+if (age < 12):
     print('kid')
 elif (age < 18):
     print('teenager')
