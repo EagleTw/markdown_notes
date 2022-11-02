@@ -1,4 +1,4 @@
-# Operators, Conditional, Loop
+# Class 2. Operators, Conditional, Loop
 
 ## Review last class
 
@@ -24,10 +24,11 @@
 ### Input
 
 ```python
-a = input("Input a number: ")
+a = input("Input a number: ")        # type from the input is str
 b = input("Input another number: ")
-c = int(a) + int(b)
-print("The sum is {}".format(c))
+c = int(a) + int(b)                  # need to convert to int before calculating
+d = a + b                            # if we do not use int() to convert
+print("The sum is {}, not ".format(c,d))
 ```
 
 ### Conditional
