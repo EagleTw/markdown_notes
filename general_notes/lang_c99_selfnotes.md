@@ -147,3 +147,46 @@ YouTube - Eskil Steenberg - [How I program C](https://www.youtube.com/watch?v=44
     * C-string
 
   1:32:54 <-- video to here
+
+## Fuction pointers
+
+Example
+
+```C
+int sum(int a, int b) {
+  return a + b;
+}
+
+int main() {
+  int (*ptr)(int, int) = &sum;
+  result = *ptr(10, 20);
+  printf("%d", result);
+  return 0;
+}
+```
+
+Why are function pointers useful? - [[link]](https://www.youtube.com/watch?v=ewBBRaF0oEA)
+
+```C
+#include <stdio.h>
+
+int sum(int a, int b) {
+  return a + b;
+}
+
+int prod(int a, int b) {
+  return a * b;
+}
+
+int wrapperFunction(int (*operation)(int, int)) {
+  int a = 10;
+  int b = 20;
+  printf("The result of the operation between %d and %d is %d\n",
+          a, b, operation(a, b));
+}
+
+int main() {
+  wrapperFunction(&sum);
+  wrapperFunction(&prod);
+}
+```
