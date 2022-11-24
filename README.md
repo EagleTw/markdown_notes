@@ -10,7 +10,5 @@
 
 This is the notes own by ypporg with no confidiential information.
 
-* general notes
-  learning notes and cheat sheets
-* programming_lesson_for_beginers
-  notes for tutoring
+* general notes --> learning notes and cheat sheets
+* programming_lesson_for_beginers --> notes for tutoring
