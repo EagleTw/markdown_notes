@@ -78,6 +78,16 @@ Keywords to remember
     ghci> [ x | x <- [10..20], x /= 13, x /= 15, x /= 19]
     [10,11,12,14,16,17,18,20]
     ```
+  * Tuples `(8,11)`
+    * `fst`, `snd`
+    * `zip`
+
+      ```Haskell
+      ghci> zip [1,2,3,4,5] [5,5,5,5,5]
+      [(1,5),(2,5),(3,5),(4,5),(5,5)]
+      ghci> zip [1 .. 5] ["one", "two", "three", "four", "five"]
+      [(1,"one"),(2,"two"),(3,"three"),(4,"four"),(5,"five")]
+      ```
 
 * Chapter 3. Types and Typeclasses
   * Types: Int, Integer, Float, Double, Char, Bool
