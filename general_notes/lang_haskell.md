@@ -1,11 +1,11 @@
 
-//************************************************** <br> 
-// Author:         ypprog                          * <br>
-// E-mail:         pan.yiping.fi@gmail.com         * <br>
-// Date:           2022-11-24                      * <br>
-// Description:                                    * <br>
-// Copyright 2022 by ypprog. All Rights Reserved   * <br>
-//************************************************** <br>
+//************************************************* <br>
+// Author:         ypprog                           <br>
+// E-mail:         pan.yiping.fi@gmail.com          <br>
+// Date:           2022-11-24                       <br>
+// Description:                                     <br>
+// Copyright 2022 by ypprog. All Rights Reserved    <br>
+//************************************************* <br>
 
 # Functional programming explained
 
