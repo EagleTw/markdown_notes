@@ -39,6 +39,11 @@ Link
 
 Keywords to remember
 
+* Chapter 2. List
+
+  * the List Monster
+    ![list monster](http://s3.amazonaws.com/lyah/listmonster.png)
+
 * Chapter 3. Types and Typeclasses
   * Types: Int, Integer, Float, Double, Char, Bool
   * Type class: 可以支援不同 Type 的操作
@@ -62,7 +67,7 @@ Keywords to remember
     * `(\a -> a + 1) 4` answer is 5
   * `fold`
     * fold (+) [1,2,3,4,5] --> 15
-    * [source code](https://wiki.haskell.org/Anonymous_function)
+    * Wiki haskell org [source code](https://wiki.haskell.org/Anonymous_function)
 
       ```Haskell
       -- if the list is empty, the result is the initial value z; else
@@ -87,3 +92,12 @@ Keywords to remember
     * `$` 的優先順序則最低
     * `$` 則是右結合的 (用空格的函數呼叫符是左結合的，如 `f a b c` 與 `((f a) b) c` 等價)
     * 減少我們程式碼中括號的數目
+
+  * `.` Function composistion
+
+    ``` Haskell
+    (.) :: (b -> c) -> (a -> b) -> a -> c
+    f . g = \x -> f (g x)
+    ```
+
+    * 函數組合的用處之一就是生成新函數，並傳遞給其它函數。
