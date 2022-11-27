@@ -42,6 +42,7 @@ Keywords to remember
 * Chapter 2. List
 
   * the List Monster
+
     ![list monster](http://s3.amazonaws.com/lyah/listmonster.png)
 
 * Chapter 3. Types and Typeclasses
