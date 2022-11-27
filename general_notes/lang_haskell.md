@@ -59,6 +59,23 @@ Keywords to remember
     ghci > 4 `elem` [3,4,5,6`
     True
     ```
+  * Texas ranges
+
+    ```Haskell
+    ghci> [1..20]
+    [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    ghci> ['a'..'z']
+    "abcdefghijklmnopqrstuvwxyz"
+    ghci> [2,4..20]
+    [2,4,6,8,10,12,14,16,18,20]
+    ```
+
+  * List comprehension
+
+    ```Haskell
+    ghci> [ x | x <- [10..20], x /= 13, x /= 15, x /= 19]
+    [10,11,12,14,16,17,18,20]
+    ```
 
 
 * Chapter 3. Types and Typeclasses
