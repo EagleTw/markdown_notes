@@ -41,26 +41,26 @@ Link
 
 Keywords to remember
 
-* Chapter 2. List
+* Chapter 2. Statring out
+  * List
+    * the List Monster: head, tail, last and init
 
-  * the List Monster: head, tail, last and init
+      ![list monster](http://s3.amazonaws.com/lyah/listmonster.png)
 
-    ![list monster](http://s3.amazonaws.com/lyah/listmonster.png)
+    * `length` get length
+    * `null` check empty
+    * `reverse`
+    * **`take`**
+      * `take 3 [5,4,3,2,1]` --> [5, 4, 3]
+    * `drop` drop n items from the front
+    * `maximum`, `minimun`
+    * `sum`, `product`
+    * `elem` takes a thing and a list of things and tells us if that thing is an element of the list
 
-  * `length` get length
-  * `null` check empty
-  * `reverse`
-  * **`take`**
-    * `take 3 [5,4,3,2,1]` --> [5, 4, 3]
-  * `drop` drop n items from the front
-  * `maximum`, `minimun`
-  * `sum`, `product`
-  * `elem` takes a thing and a list of things and tells us if that thing is an element of the list
-
-    ```Haskell
-    ghci > 4 `elem` [3,4,5,6`
-    True
-    ```
+      ```Haskell
+      ghci > 4 `elem` [3,4,5,6`
+      True
+      ```
   * Texas ranges
 
     ```Haskell
