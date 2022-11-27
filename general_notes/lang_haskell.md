@@ -10,15 +10,17 @@
 # Functional programming explained
 
 Haskell Links
-* [Haskell reference](http://zvon.org/other/haskell/Outputprelude/index.html)
 
+* [Haskell reference](http://zvon.org/other/haskell/Outputprelude/index.html)
 
 ## [Functional Programming 風格的 C 語言實作](https://hackmd.io/@sysprog/c-functional-programming)
 
 Github Link
+
 * [ypprog/Functional-Programming-in-C](https://github.com/ypprog/Functional-Programming-in-C)
 
 [Why Functional Programming Matters](http://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf) 是篇 1984 年的論文，在 1990 年做小幅度修改，主要凸顯出 FP 的優點與重要特質。
+
 * 中文翻譯：[函數式程式設計為什麼至關重要](https://www.byvoid.com/zhs/blog/why-functional-programming)
 
 Fuctional proramming 特點:
@@ -76,7 +78,6 @@ Keywords to remember
     ghci> [ x | x <- [10..20], x /= 13, x /= 15, x /= 19]
     [10,11,12,14,16,17,18,20]
     ```
-
 
 * Chapter 3. Types and Typeclasses
   * Types: Int, Integer, Float, Double, Char, Bool
