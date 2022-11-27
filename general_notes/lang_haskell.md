@@ -59,7 +59,7 @@ Keywords to remember
   * Curried functions
   * Maps and filter
   * Lambdas (Anonymous function)
-    `(\a -> a + 1) 4` answer is 5
+    * `(\a -> a + 1) 4` answer is 5
   * `fold`
     * fold (+) [1,2,3,4,5] --> 15
     * Source code
