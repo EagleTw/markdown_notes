@@ -13,7 +13,9 @@ Haskell Links
 
 * [Haskell reference](http://zvon.org/other/haskell/Outputprelude/index.html)
 
-## [Functional Programming 風格的 C 語言實作](https://hackmd.io/@sysprog/c-functional-programming)
+## Functional Programming 風格的 C 語言實作
+
+[Jserv hackmd](https://hackmd.io/@sysprog/c-functional-programming)
 
 Github Link
 
