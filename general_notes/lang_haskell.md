@@ -58,7 +58,8 @@ Keywords to remember
 * Chapter 6. Higher Order Functions
   * Curried functions
   * Maps and filter
-  * Lambdas
+  * Lambdas (Anonymous function)
+    `(\a -> a + 1) 4` answer is 5
   * `fold`
     * fold (+) [1,2,3,4,5] --> 15
     * Source code
