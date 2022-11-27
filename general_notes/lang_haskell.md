@@ -63,6 +63,7 @@ Keywords to remember
   * `fold`
     * fold (+) [1,2,3,4,5] --> 15
     * Source code
+
       ```Haskell
       -- if the list is empty, the result is the initial value z; else
       -- apply f to the first element and the result of folding the rest
@@ -75,3 +76,13 @@ Keywords to remember
       foldl f z []     = z
       foldl f z (x:xs) = foldl f (f z x) xs
       ```
+
+  * `$` function (function application)
+
+    ```Haskell
+    ($) :: (a -> b) -> a -> b
+    f $ x = f x
+    ```
+
+    * `$` 的優先順序則最低
+    * `$` 則是右結合的 (用空格的函數呼叫符是左結合的，如 `f a b c` 與 `((f a) b) c` 等價)
