@@ -15,7 +15,7 @@ Haskell Links
 
 ## Functional Programming 風格的 C 語言實作
 
-[Jserv hackmd](https://hackmd.io/@sysprog/c-functional-programming)
+[Jserv](https://hackmd.io/@sysprog/c-functional-programming)
 
 Github Link
 
@@ -43,7 +43,8 @@ Link
 
 Keywords to remember
 
-* Chapter 2. Statring out
+### Chapter 2. Statring out
+
   * List
     * the List Monster: head, tail, last and init
 
@@ -91,23 +92,26 @@ Keywords to remember
       [(1,"one"),(2,"two"),(3,"three"),(4,"four"),(5,"five")]
       ```
 
-* Chapter 3. Types and Typeclasses
+### Chapter 3. Types and Typeclasses
+
   * Types: Int, Integer, Float, Double, Char, Bool
   * Type class: 可以支援不同 Type 的操作
     * `Eq`, `Ord`, `show`, `read` typeclasses
     * Bounded: `minBound`, `maxBound`
     * Num typeclass, Integral typeclass, Float typeclasses
 
-* Chapter 4. Syntax in Functions
+### Chapter 4. Syntax in Functions
+
   * Pattern matching
   * Guards
   * Where
   * let
   * Case expression
 
-* Chapter 5. Regression
+### Chapter 5. Regression
 
-* Chapter 6. Higher Order Functions
+### Chapter 6. Higher Order Functions
+
   * Curried functions
   * Maps and filter
   * Lambdas (Anonymous function)
