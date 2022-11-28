@@ -41,8 +41,6 @@ Link
 * [Haskell 趣味指南](https://learnyouahaskell.mno2.org/)
 * [英文版](http://learnyouahaskell.com/chapters)
 
-Keywords to remember
-
 ### Chapter 2. Statring out
 
   * List
@@ -113,7 +111,26 @@ Keywords to remember
 ### Chapter 6. Higher Order Functions
 
   * Curried functions
-  * Maps and filter
+  * Map and filter
+    * map :: (a -> b) -> [a] -> [b]
+
+      ```Haskell
+      -- returns a list constructed by appling a function (the first argument) to all items in a list passed as the second argument
+
+      Input: map abs [-1,-3,4,-12]
+      Output: [1,3,4,12]
+      ```
+
+    * filter :: (a -> Bool) -> [a] -> [a]
+
+      ```Haskell
+      -- returns a list constructed from members of a list (the second argument) fulfilling a condition given by the first argument
+
+      Input: filter (>5) [1,2,3,4,5,6,7,8]
+      Output: [6,7,8]
+
+      ```
+
   * Lambdas (Anonymous function)
     * `(\a -> a + 1) 4` answer is 5
   * `fold`
