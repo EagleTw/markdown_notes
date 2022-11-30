@@ -8,8 +8,8 @@
 
 * [3.1 Commands available during CGDB mode](https://cgdb.github.io/docs/cgdb.html#CGDB-Mode)
 * 左右分割 Toggle the window orientation (horizontal <-> vertical)
-    1. &lt;Esc&gt;
-    2. &lt;Ctrl&gt; + w
+  1. &lt;Esc&gt;
+  2. &lt;Ctrl&gt; + w
 
 ### Breakpoints
 
@@ -25,14 +25,14 @@
 * next (n) -->Go to next instruction (source line) but donʻt dive into functions.
 * finish --> Continue until the current function returns.
 * continue (c ) --> Continue normal execution
-* `target record-full` --> Turn on reverse stepping 
+* `target record-full` --> Turn on reverse stepping
 
 ### Variables and Memory
 
 * `whatis` --> Show C variable type
 * print/format &lt;what&gt; --> Print content of variable/memory location/register.
 * display/format &lt;what&gt; --> Like „print“, but print the information after each stepping instruction.
-* undisplay &lt;display#&gt; --> Remove the „display“ with the given 
+* undisplay &lt;display#&gt; --> Remove the „display“ with the given
 number.
 * enable display &lt;display#&gt;
 * disable display &lt;display#&gt; --> En- or disable the „display“ with the given number
@@ -40,9 +40,11 @@ number.
 ### Manipulating the program
 
 * set var &lt;variable_name&gt;=&lt;value&gt; --> Change the content of a variable to the given value.
-* set environment FOO = 1 --> Environment 
-    * show environment Foo 
+* set environment FOO = 1 --> Environment
+  * show environment Foo
 * return &lt;expression&gt; --> Force the current function to return immediately, passing the given value
+* Setting number-of-elements to zero means that the printing is unlimited.
+  * set print elements number-of-elements
 
 
 ### Informations
@@ -61,7 +63,8 @@ number.
 * show listsize --> Print how many are shown in the „list“ command.
 * whatis &lt;variable_name&gt; --> Print type of named variable
 
-## GDB TUI Mode 
+## GDB TUI Mode
+
 * `Ctrl+X`, `A` to enable/disable.
 * `Ctrl+X`, `O` to switch between active windows SourceCode(upside) / GdbCommand(downside).
 * `Ctrl+L` to redraw windows if text display strangely.
