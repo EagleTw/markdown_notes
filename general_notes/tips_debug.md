@@ -44,8 +44,7 @@ number.
   * show environment Foo
 * return &lt;expression&gt; --> Force the current function to return immediately, passing the given value
 * Setting number-of-elements to zero means that the printing is unlimited.
-  * set print elements number-of-elements
-
+  * `set print elements 0`
 
 ### Informations
 
