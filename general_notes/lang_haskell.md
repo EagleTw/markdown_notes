@@ -43,129 +43,129 @@ Link
 
 ### Chapter 2. Statring out
 
-  * List
-    * the List Monster: head, tail, last and init
+* List
+  * the List Monster: head, tail, last and init
 
-      ![list monster](http://s3.amazonaws.com/lyah/listmonster.png)
+    ![list monster](http://s3.amazonaws.com/lyah/listmonster.png)
 
-    * `length` get length
-    * `null` check empty
-    * `reverse`
-    * **`take`**
-      * `take 3 [5,4,3,2,1]` --> [5, 4, 3]
-    * `drop` drop n items from the front
-    * `maximum`, `minimun`
-    * `sum`, `product`
-    * `elem` takes a thing and a list of things and tells us if that thing is an element of the list
-
-      ```Haskell
-      ghci > 4 `elem` [3,4,5,6`
-      True
-      ```
-  * Texas ranges
+  * `length` get length
+  * `null` check empty
+  * `reverse`
+  * **`take`**
+    * `take 3 [5,4,3,2,1]` --> [5, 4, 3]
+  * `drop` drop n items from the front
+  * `maximum`, `minimun`
+  * `sum`, `product`
+  * `elem` takes a thing and a list of things and tells us if that thing is an element of the list
 
     ```Haskell
-    ghci> [1..20]
-    [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    ghci> ['a'..'z']
-    "abcdefghijklmnopqrstuvwxyz"
-    ghci> [2,4..20]
-    [2,4,6,8,10,12,14,16,18,20]
+    ghci > 4 `elem` [3,4,5,6`
+    True
     ```
+* Texas ranges
 
-  * List comprehension
+  ```Haskell
+  ghci> [1..20]
+  [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+  ghci> ['a'..'z']
+  "abcdefghijklmnopqrstuvwxyz"
+  ghci> [2,4..20]
+  [2,4,6,8,10,12,14,16,18,20]
+  ```
+
+* List comprehension
+
+  ```Haskell
+  ghci> [ x | x <- [10..20], x /= 13, x /= 15, x /= 19]
+  [10,11,12,14,16,17,18,20]
+  ```
+* Tuples `(8,11)`
+  * `fst`, `snd`
+  * `zip`
 
     ```Haskell
-    ghci> [ x | x <- [10..20], x /= 13, x /= 15, x /= 19]
-    [10,11,12,14,16,17,18,20]
+    ghci> zip [1,2,3,4,5] [5,5,5,5,5]
+    [(1,5),(2,5),(3,5),(4,5),(5,5)]
+    ghci> zip [1 .. 5] ["one", "two", "three", "four", "five"]
+    [(1,"one"),(2,"two"),(3,"three"),(4,"four"),(5,"five")]
     ```
-  * Tuples `(8,11)`
-    * `fst`, `snd`
-    * `zip`
-
-      ```Haskell
-      ghci> zip [1,2,3,4,5] [5,5,5,5,5]
-      [(1,5),(2,5),(3,5),(4,5),(5,5)]
-      ghci> zip [1 .. 5] ["one", "two", "three", "four", "five"]
-      [(1,"one"),(2,"two"),(3,"three"),(4,"four"),(5,"five")]
-      ```
 
 ### Chapter 3. Types and Typeclasses
 
-  * Types: Int, Integer, Float, Double, Char, Bool
-  * Type class: 可以支援不同 Type 的操作
-    * `Eq`, `Ord`, `show`, `read` typeclasses
-    * Bounded: `minBound`, `maxBound`
-    * Num typeclass, Integral typeclass, Float typeclasses
+* Types: Int, Integer, Float, Double, Char, Bool
+* Type class: 可以支援不同 Type 的操作
+  * `Eq`, `Ord`, `show`, `read` typeclasses
+  * Bounded: `minBound`, `maxBound`
+  * Num typeclass, Integral typeclass, Float typeclasses
 
 ### Chapter 4. Syntax in Functions
 
-  * Pattern matching
-  * Guards
-  * Where
-  * let
-  * Case expression
+* Pattern matching
+* Guards
+* Where
+* let
+* Case expression
 
 ### Chapter 5. Regression
 
 ### Chapter 6. Higher Order Functions
 
-  * Curried functions
-  * Map and filter
-    * map :: (a -> b) -> [a] -> [b]
-
-      ```Haskell
-      -- returns a list constructed by appling a function (the first argument) to all items in a list passed as the second argument
-
-      Input: map abs [-1,-3,4,-12]
-      Output: [1,3,4,12]
-      ```
-
-    * filter :: (a -> Bool) -> [a] -> [a]
-
-      ```Haskell
-      -- returns a list constructed from members of a list (the second argument) fulfilling a condition given by the first argument
-
-      Input: filter (>5) [1,2,3,4,5,6,7,8]
-      Output: [6,7,8]
-
-      ```
-
-  * Lambdas (Anonymous function)
-    * `(\a -> a + 1) 4` answer is 5
-  * `fold`
-    * fold (+) [1,2,3,4,5] --> 15
-    * Wiki haskell org [source code](https://wiki.haskell.org/Anonymous_function)
-
-      ```Haskell
-      -- if the list is empty, the result is the initial value z; else
-      -- apply f to the first element and the result of folding the rest
-      foldr f z []     = z
-      foldr f z (x:xs) = f x (foldr f z xs)
-
-      -- if the list is empty, the result is the initial value; else
-      -- we recurse immediately, making the new initial value the result
-      -- of combining the old initial value with the first element.
-      foldl f z []     = z
-      foldl f z (x:xs) = foldl f (f z x) xs
-      ```
-
-  * `$` function (function application)
+* Curried functions
+* Map and filter
+  * map :: (a -> b) -> [a] -> [b]
 
     ```Haskell
-    ($) :: (a -> b) -> a -> b
-    f $ x = f x
+    -- returns a list constructed by appling a function (the first argument) to all items in a list passed as the second argument
+
+    Input: map abs [-1,-3,4,-12]
+    Output: [1,3,4,12]
     ```
 
-    * `$` 的優先順序則最低
-    * `$` 則是右結合的 (用空格的函數呼叫符是左結合的，如 `f a b c` 與 `((f a) b) c` 等價)
-    * 減少我們程式碼中括號的數目
+  * filter :: (a -> Bool) -> [a] -> [a]
 
-  * `.` Function composistion
+    ```Haskell
+    -- returns a list constructed from members of a list (the second argument) fulfilling a condition given by the first argument
 
-    ``` Haskell
-    (.) :: (b -> c) -> (a -> b) -> a -> c
-    f . g = \x -> f (g x)
+    Input: filter (>5) [1,2,3,4,5,6,7,8]
+    Output: [6,7,8]
+
     ```
 
-    * 函數組合的用處之一就是生成新函數，並傳遞給其它函數。
+* Lambdas (Anonymous function)
+  * `(\a -> a + 1) 4` answer is 5
+* `fold`
+  * fold (+) [1,2,3,4,5] --> 15
+  * Wiki haskell org [source code](https://wiki.haskell.org/Anonymous_function)
+
+    ```Haskell
+    -- if the list is empty, the result is the initial value z; else
+    -- apply f to the first element and the result of folding the rest
+    foldr f z []     = z
+    foldr f z (x:xs) = f x (foldr f z xs)
+
+    -- if the list is empty, the result is the initial value; else
+    -- we recurse immediately, making the new initial value the result
+    -- of combining the old initial value with the first element.
+    foldl f z []     = z
+    foldl f z (x:xs) = foldl f (f z x) xs
+    ```
+
+* `$` function (function application)
+
+  ```Haskell
+  ($) :: (a -> b) -> a -> b
+  f $ x = f x
+  ```
+
+  * `$` 的優先順序則最低
+  * `$` 則是右結合的 (用空格的函數呼叫符是左結合的，如 `f a b c` 與 `((f a) b) c` 等價)
+  * 減少我們程式碼中括號的數目
+
+* `.` Function composistion
+
+  ``` Haskell
+  (.) :: (b -> c) -> (a -> b) -> a -> c
+  f . g = \x -> f (g x)
+  ```
+
+  * 函數組合的用處之一就是生成新函數，並傳遞給其它函數。
