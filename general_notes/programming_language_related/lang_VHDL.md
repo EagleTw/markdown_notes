@@ -1,4 +1,5 @@
-# VHDL vs Verilog 
+# [lang] VHDL vs Verilog 
+
 * Author: Yi-Ping Pan
 
 ###### tags: `SNPS`,`learning`

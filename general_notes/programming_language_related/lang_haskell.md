@@ -7,7 +7,7 @@
 // Copyright 2022 by ypprog. All Rights Reserved    <br>
 //************************************************* <br>
 
-# Functional programming explained
+# [lang] Haskell and Funtional Programming
 
 Haskell Links
 
