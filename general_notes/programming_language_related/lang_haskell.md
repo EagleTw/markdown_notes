@@ -246,4 +246,4 @@ Link
 * Typeclasses 102
 * A yes-no typeclass
 * The Functor typeclass
-* * * * * * * * Kinds and some type-foo
+* Kinds and some type-foo
