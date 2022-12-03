@@ -238,6 +238,11 @@ Link
   ```
 
 * Recursive data structures (遞迴地定義資料結構)
+
+  ```Haskell
+  data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Read, Eq)
+  ```
+
 * Typeclasses 102
 * A yes-no typeclass
 * The Functor typeclass
