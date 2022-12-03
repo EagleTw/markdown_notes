@@ -208,7 +208,7 @@ Link
                        , height :: Float
                        , phoneNumber :: String
                        , flavor :: String
-                       } deriving (Show)
+                       } deriving (Show, Eq, Read)
   ```
 
   Auto generated constructor
@@ -217,3 +217,28 @@ Link
   ghci> :t firstName
   firstName :: Person -> String
   ```
+
+* Type synonym
+  * `[Char]` 和 `String` 等價
+
+  ```Haskell
+  type PhoneBook = [(String, String)]
+
+  -- Equal to
+  -- 目的: 更加易讀
+  type PhoneNumber = String
+  type Name = String
+  type PhoneBook = [(Name,PhoneNumber)]
+  ```
+
+  * 型別別名也是可以有參數的，如果你想搞個型別來表示關聯 List
+
+  ```Haskell
+  type AssocList k v = [(k,v)]
+  ```
+
+* Recursive data structures (遞迴地定義資料結構)
+* Typeclasses 102
+* A yes-no typeclass
+* The Functor typeclass
+* * * * * * * * Kinds and some type-foo
