@@ -1,4 +1,4 @@
-# Profiling
+# [Tips] Profiling: Callgrind/Collect
 
 ## Valgrind / Callgrind
 

@@ -1,4 +1,4 @@
-# Tmux tips
+# [Tips] Tmux tips
 
 ## Sessions
 
