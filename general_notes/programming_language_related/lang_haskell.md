@@ -200,3 +200,20 @@ Link
   ```
 
 * Record syntax
+
+  ```Haskell
+  data Person = Person { firstName :: String
+                       , lastName :: String
+                       , age :: Int
+                       , height :: Float
+                       , phoneNumber :: String
+                       , flavor :: String
+                       } deriving (Show)
+  ```
+
+  Auto generated constructor
+
+  ```Haskell
+  ghci> :t firstName
+  firstName :: Person -> String
+  ```
