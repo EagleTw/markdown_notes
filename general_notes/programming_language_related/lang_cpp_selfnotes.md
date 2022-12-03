@@ -1,4 +1,4 @@
-# Cpp ypprog notes
+# [lang] Cpp ypprog notes
 
 ## Tips from Eskil Steenberg
 

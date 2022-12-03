@@ -1,4 +1,4 @@
-# C++ 讀書會
+# [lang] C++ 讀書會
 
 ## [2022/10/19] C++ Group Orientation
 

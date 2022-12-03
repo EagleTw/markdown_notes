@@ -1,4 +1,4 @@
-# c99 ypporg notes
+# [lang] c99 ypporg notes
 
 ## Tips from Eskil Steenberg
 
