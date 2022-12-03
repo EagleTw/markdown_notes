@@ -173,5 +173,30 @@ Link
 ### Chapter 8. Create own type and typeclass
 
 * Algebraic data types intro
-  * `data Shape = Circle Float Float Float | Rectangle Float Float Float Float`
+
+  ```Haskell
+  data Shape = Circle Float Float Float | Rectangle Float Float Float Float
+  ```
+
+  ```Haskell
+  ghci> :t Circle
+  Circle :: Float -> Float -> Float -> Shape
+  ```
+
+  * Circle is a constructor with three fields
+  * value constructor are functions
+
+  ```Haskell
+  surface :: Shape -> Float
+  surface (Circle _ _ r) = pi * r ^ 2
+  surface (Rectangle x1 y1 x2 y2) = (abs $ x2 - x1) * (abs $ y2 - y1)
+  ```
+
+  ```Haskell
+  ghci> surface $ Circle 10 20 10
+  314.15927
+  ghci> surface $ Rectangle 0 0 100 100
+  10000.0
+  ```
+
 * Record syntax
