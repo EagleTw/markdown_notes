@@ -169,3 +169,9 @@ Link
   ```
 
   * 函數組合的用處之一就是生成新函數，並傳遞給其它函數。
+
+### Chapter 8. Create own type and typeclass
+
+* Algebraic data types intro
+  * `data Shape = Circle Float Float Float | Rectangle Float Float Float Float`
+* Record syntax
