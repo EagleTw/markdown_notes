@@ -28,6 +28,7 @@
 * Switch/select pane by number `Ctrl + b q 0...9`
 * Toggle pane zoom `Ctrl + b z`
 * Close current pane `Ctrl + b x`
+* Change vertical split to horizonal split `Ctrl + b [spacebar]`
 
 ## Copy Mode
 
