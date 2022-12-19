@@ -12,6 +12,7 @@
 Haskell Links
 
 * [Haskell reference](http://zvon.org/other/haskell/Outputprelude/index.html)
+* [Real World Haskell](https://book.realworldhaskell.org/read/)
 
 ## Functional Programming 風格的 C 語言實作
 
