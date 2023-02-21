@@ -74,6 +74,7 @@
     | Scope     | x              |          |      |
     | Schedule  |                | x        |      |
     | Resources |                | x        |      |
+
   * Deliverables
 
     Deinitition: Anything that is producecd by the project team
@@ -93,6 +94,12 @@
     * Effort Estimate: (Best case + Worst Case + 4 * Normal Case) / 6
     * Duration Estimate: (Effort Estimate / Loading Factor)
     * Loading Factor: (spent time doing non-development activities) / all time
+  
+  * Dependency diagram --> Find critical path
+
+    1. Create sticky notes for the lowest-task in WBS \
+        Need: outline code, task description, duration, doer
+    2. 有相關性的放前後
 
 ## Part 3
 
