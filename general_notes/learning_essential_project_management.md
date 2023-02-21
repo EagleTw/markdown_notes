@@ -94,13 +94,47 @@
     * Effort Estimate: (Best case + Worst Case + 4 * Normal Case) / 6
     * Duration Estimate: (Effort Estimate / Loading Factor)
     * Loading Factor: (spent time doing non-development activities) / all time
-  
+
   * Dependency diagram --> Find critical path
 
     1. Create sticky notes for the lowest-task in WBS \
         Need: outline code, task description, duration, doer
     2. 有相關性的放前後
 
-## Part 3
+  * Tools for tracking
+    * Microsoft projects
+      * Expensive
+      * Own logic
+    * Microsoft excel
 
-## Part 4
+  * Risk management (risk log)
+    * planned in planning phase
+    * we need time buffer for this
+
+### Planning for external dependency (**RISK**)
+
+> Managing external dependencies is critical
+
+* Take each of the external dependencies from your List of Deliverables
+* Identify who will contact the other organization, and by when to
+  * create a written agreement
+  * determine what tasks must be added to your team's schedule
+* Understand the other team's strategy and high-level priorities
+
+### Determime metrics & Criteria
+
+* set milestones
+* set criteria
+
+## Part 3. Executing
+
+### Change Management
+
+> Change is always happening!
+
+講得太爛(要自己查)
+
+### Tracking
+
+
+(其他都跳過)
