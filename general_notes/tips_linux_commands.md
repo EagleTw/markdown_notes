@@ -71,6 +71,11 @@ By default vim will jump to the first result, but the following commands can be 
 ### Copy and pastek
 
 1. C-b +\[  --> to copy mode
-2. _space-  --> select
-3. C-w    --> copy to clipboard
-4. C-b + \] --> paste
+2. use vim yanking `V v y yy`
+3. C-b + \] --> paste
+
+## Navigating in bash
+
+* `<ctrl+a>`, `<ctrl+e>` jump front/end line
+* `<meta+f>`, `<meta+b>` jump a word
+* `<ctrl+h>` backspace
