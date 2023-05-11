@@ -2,6 +2,7 @@
 
 ###### tags: `SNPS`,`Programming`, `Tips`
 
+非常好用的->[【总结】vim命令使用总结，该来的还是躲不掉](https://zhuanlan.zhihu.com/p/607513080)
 
 ## 編輯模式
 
