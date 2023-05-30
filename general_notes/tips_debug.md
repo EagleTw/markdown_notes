@@ -19,6 +19,8 @@
 * enable &lt;breakpoint#&gt; --> Enable a disabled breakpoint.
 * disable &lt;breakpoint#&gt; --> Disable a breakpoint.
 
+* `break file:line if strcmp(y, "hello") == 0`
+
 ### Stepping
 
 * step (s) --> Go to next instruction (source line), diving into function
