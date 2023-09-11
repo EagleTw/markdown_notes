@@ -100,7 +100,7 @@ Disassembly of section .text:
 	...
 ```
 
-### readelf
+### elf open
 
 Run `riscv32-unknown-elf-readelf -h build/hello.elf`
 
@@ -265,15 +265,22 @@ bool elf_open(elf_t *e, const char *path)
 }
 ```
 
-Q&A (2023/09/11)
+#### Q&A (2023/09/11)
 
-* Question: 為什麼原本使用 fopen 現在使用 mmap?
-* Jserv: mmap 在開啟大檔案時會有優勢。On-demand paging。反之，fopen 遇到大檔案時，開啟時間較慢。
-* Question: man mmap 説，mmap 是利用 virtual memory。Virtual Memory 在 Disk 不是會比較慢嗎。
+* Question: 為什麼原本使用 fopen 現在使用 `mmap`.  [man mmap](https://man7.org/linux/man-pages/man2/mmap.2.html) ?
+* Jserv: `mmap` 在開啟大檔案時會有優勢。On-demand paging。反之，fopen 遇到大檔案時，開啟時間較慢。
+* Question: man `mmap` 説，mmap 是利用 virtual memory。Virtual Memory 在 Disk 不是會比較慢嗎。
 * Jserv: virtual memory 不見得跟 disk 有關，請「不要」讀恐龍書來。[這本書可自由下載，品質比恐龍書好多了](https://pages.cs.wisc.edu/~remzi/OSTEP/)
 
+#### ypaskell's study
 
-struct stat
+[understanding mmap, the workhorse behind keeping memory access efficient in linux](https://www.youtube.com/watch?v=8hVLcyBkSXY)
+
+一般使用 fopen 的方式：每一個 fopen, fread, 都是使用 system call，從 user space 轉到 kernel space。每一次的 system call 都要 Virtual Memory 查 TLB，去 Physical Memory 看。 每一個 system call 花的時間不算多，但的 file 大的時候，累積起來也是慢。
+
+而 mmap 是把 file 寫到 Virtual Memory 中，直接可以讀取，少了 system call 的時間。
+
+`struct stat` - [man](https://man7.org/linux/man-pages/man2/stat.2.html)
 
 ```cpp=
 struct stat {
@@ -291,5 +298,35 @@ struct stat {
     time_t    st_mtime;   /* time of last modification */
     time_t    st_ctime;   /* time of last status change */
 };
+```
+
+下面這一段是一個很神奇的操作，固定大小的資料，可以直接 Assign 成 Structure。就可以非常簡單的 Abstract 資料。
+
+```cpp
+/* point to the header */
+e->hdr = (const struct Elf32_Ehdr *) e->raw_data;
+
+/* Elf32 header */
+struct Elf32_Ehdr {
+    uint8_t e_ident[EI_NIDENT];
+    Elf32_Half e_type;      /* Object file type */
+    Elf32_Half e_machine;   /* Architecture */
+    Elf32_Word e_version;   /* Object file version */
+    Elf32_Addr e_entry;     /* Entry point virtual address */
+    Elf32_Off e_phoff;      /* Program header table file offset */
+    Elf32_Off e_shoff;      /* Section header table file offset */
+    Elf32_Word e_flags;     /* Processor-specific flags */
+    Elf32_Half e_ehsize;    /* ELF header size in bytes */
+    Elf32_Half e_phentsize; /* Program header table entry size */
+    Elf32_Half e_phnum;     /* Program header table entry count */
+    Elf32_Half e_shentsize; /* Section header table entry size */
+    Elf32_Half e_shnum;     /* Section header table entry count */
+    Elf32_Half e_shstrndx;  /* Section header string table index */
+};
+
+typedef uint32_t Elf32_Addr;
+typedef uint32_t Elf32_Off;
+typedef uint16_t Elf32_Half;
+typedef uint32_t Elf32_Word;
 ```
 
