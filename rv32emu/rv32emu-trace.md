@@ -328,3 +328,8 @@ typedef uint16_t Elf32_Half;
 typedef uint32_t Elf32_Word;
 ```
 
+
+## TODO
+
+- [] Understand the code
+- [] Improve comments in `riscv_private.h`
