@@ -149,7 +149,7 @@ Breakpoint 1: 25 locations.
    113 	        const char *arg = args[i];
    114 	        /* parse flags */
    115 	        if (arg[0] == '-') {
-   
+
 (lldb) finish
 Process 28894 stopped
 * thread #1, queue = 'com.apple.main-thread', stop reason = step out
@@ -171,7 +171,7 @@ Process 28894 stopped
 * thread #1, queue = 'com.apple.main-thread', stop reason = step in
     frame #0: 0x000000010000a81c rv32emu`elf_new at elf.c:137:16 [opt]
    134
-   135 	elf_t *elf_new() 
+   135 	elf_t *elf_new()
    136 	{
 -> 137 	    elf_t *e = malloc(sizeof(elf_t));
    138 	    e->hdr = NULL;
@@ -198,8 +198,6 @@ struct elf_internal {
 
 
 ```cpp=
-bool elf_open(elf_t *e, const char *path)
-{
 bool elf_open(elf_t *e, const char *path)
 {
     /* free previous memory */
@@ -278,7 +276,7 @@ bool elf_open(elf_t *e, const char *path)
 
 一般使用 fopen 的方式：每一個 fopen, fread, 都是使用 system call，從 user space 轉到 kernel space。每一次的 system call 都要 Virtual Memory 查 TLB，去 Physical Memory 看。 每一個 system call 花的時間不算多，但的 file 大的時候，累積起來也是慢。
 
-而 mmap 是把 file 寫到 Virtual Memory 中，直接可以讀取，少了 system call 的時間。
+而 mmap 是把 file 映射到 Virtual Memory 中，直接可以讀取，少了 system call 的時間。
 
 `struct stat` - [man](https://man7.org/linux/man-pages/man2/stat.2.html)
 
