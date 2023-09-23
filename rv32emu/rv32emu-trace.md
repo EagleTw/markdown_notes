@@ -47,9 +47,9 @@ make all
 
 Run `riscv32-unknown-elf-objdump -dhs build/hello.elf | less`
 
-* `-d`: Display assembler contents of executable sections
-* `-h`: Display the contents of the section headers
-* `-s`: Display the full contents of all sections requested
+- `-d`: Display assembler contents of executable sections
+- `-h`: Display the contents of the section headers
+- `-s`: Display the full contents of all sections requested
 
 ```Text=
 $ riscv32-unknown-elf-objdump -dhs build/hello.elf
@@ -182,6 +182,8 @@ Process 28894 stopped
    143 	}
 ```
 
+### Elf
+
 `elf_t` declared in `elf.c`
 
 ```cpp=
@@ -195,7 +197,6 @@ struct elf_internal {
     map_t symbols;
 };
 ```
-
 
 ```cpp=
 bool elf_open(elf_t *e, const char *path)
@@ -265,10 +266,10 @@ bool elf_open(elf_t *e, const char *path)
 
 #### Q&A (2023/09/11)
 
-* Question: 為什麼原本使用 fopen 現在使用 `mmap`.  [man mmap](https://man7.org/linux/man-pages/man2/mmap.2.html) ?
-* Jserv: `mmap` 在開啟大檔案時會有優勢。On-demand paging。反之，fopen 遇到大檔案時，開啟時間較慢。
-* Question: man `mmap` 説，mmap 是利用 virtual memory。Virtual Memory 在 Disk 不是會比較慢嗎。
-* Jserv: virtual memory 不見得跟 disk 有關，請「不要」讀恐龍書來。[這本書可自由下載，品質比恐龍書好多了](https://pages.cs.wisc.edu/~remzi/OSTEP/)
+- Question: 為什麼原本使用 fopen 現在使用 `mmap`. [man mmap](https://man7.org/linux/man-pages/man2/mmap.2.html) ?
+- Jserv: `mmap` 在開啟大檔案時會有優勢。On-demand paging。反之，fopen 遇到大檔案時，開啟時間較慢。
+- Question: man `mmap` 説，mmap 是利用 virtual memory。Virtual Memory 在 Disk 不是會比較慢嗎。
+- Jserv: virtual memory 不見得跟 disk 有關，請「不要」讀恐龍書來。[這本書可自由下載，品質比恐龍書好多了](https://pages.cs.wisc.edu/~remzi/OSTEP/)
 
 #### ypaskell's study
 
@@ -328,6 +329,58 @@ typedef uint16_t Elf32_Half;
 typedef uint32_t Elf32_Word;
 ```
 
+### I/O Initialization
+
+Macro 的騷操作。傳入 Funciton pointer。
+
+```cpp
+/* install the I/O handlers for the RISC-V runtime */
+const riscv_io_t io = {
+    /* memory read interface */
+    .mem_ifetch = MEMIO(ifetch),
+    .mem_read_w = MEMIO(read_w),
+    .mem_read_s = MEMIO(read_s),
+    .mem_read_b = MEMIO(read_b),
+
+    /* memory write interface */
+    .mem_write_w = MEMIO(write_w),
+    .mem_write_s = MEMIO(write_s),
+    .mem_write_b = MEMIO(write_b),
+
+    /* system */
+    .on_ecall = ecall_handler,
+    .on_ebreak = ebreak_handler,
+    .allow_misalign = opt_misaligned,
+};
+
+// MEMIO
+#define MEMIO(op) on_mem_##op
+#define IO_HANDLER_IMPL(type, op, RW)                                     \
+    static IIF(RW)(                                                       \
+        /* W */ void MEMIO(op)(riscv_word_t addr, riscv_##type##_t data), \
+        /* R */ riscv_##type##_t MEMIO(op)(riscv_word_t addr))            \
+    {                                                                     \
+        IIF(RW)                                                           \
+        (memory_##op(addr, (uint8_t *) &data), return memory_##op(addr)); \
+    }
+
+#define R 0
+#define W 1
+
+IO_HANDLER_IMPL(word, ifetch, R)
+IO_HANDLER_IMPL(word, read_w, R)
+IO_HANDLER_IMPL(half, read_s, R)
+IO_HANDLER_IMPL(byte, read_b, R)
+
+IO_HANDLER_IMPL(word, write_w, W)
+IO_HANDLER_IMPL(half, write_s, W)
+IO_HANDLER_IMPL(byte, write_b, W)
+
+#undef R
+#undef W
+```
+
+## With Jserv discuss history
 
 ## TODO
 
