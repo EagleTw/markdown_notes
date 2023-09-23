@@ -40,4 +40,8 @@ I asked Jersv wheter it is possible to focus on branch prediction on rv32emu.
 
 - **Question 3:** What is the purpose of **jump trampolines** and how do they affect performance?
   - **Answer:**
-  1234567
+  NYI
+
+- **Question 4:** What benchmark is used?
+  - **Answer:**
+  SPEC CPU2006
