@@ -12,8 +12,32 @@ I asked Jersv wheter it is possible to focus on branch prediction on rv32emu.
 
 - **Question 1**: What is the question of the paper?
   - **Answer:**
-  1234567
+  Target in the code cache exceed ±1MB range, but the original address in the original binaray did not. `jump trampollines` - Remove JALR with JALs, avoiding overhead with register jumps
 
-- **Question 2:** What is the purpose of jump trampolines and how do they affect performance?
+  - **Subquestion:** What is register jump overhead?
+   "register jump overhead," it means that using jump instructions (like conditional jumps or branches) can introduce additional processing time or computational overhead because the CPU needs to perform tasks like saving and restoring the program counter or updating the branch prediction.
+
+- **Question 2:**: What is **Dynamic Binary Modification**?
+  - **Answer:**
+
+    Sub-questions:
+
+    - When does it happen?
+      - **Answer:**
+      Runtime
+
+    - What applicaiton can be done?
+      - **Answer:**
+      Binary instrumentation(DBI), binary translation, virtualization, error detection
+
+    - Disadvantages?
+      - **Answer:**
+      performance overhead - load, execute, modify a binary. Mostly in **handling iposition depentent instructions**.
+
+    - Frameworks:
+      - **Answer:**
+      MAMBO
+
+- **Question 3:** What is the purpose of **jump trampolines** and how do they affect performance?
   - **Answer:**
   1234567
