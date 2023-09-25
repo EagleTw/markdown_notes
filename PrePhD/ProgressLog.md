@@ -135,3 +135,52 @@ drwxrwxr-x 3 clarity    4096 Sep 24 14:57 test
 -rw-rw-r-- 1 clarity    7031 Sep 24 14:57 util.S
 We re done; exiting with status: 0 #<-- by dbm
 ```
+
+## 2023/09/25 (Mon.)
+
+Jserv: 你要先了解模擬器的類型
+
+### [Banshee: A Fast LLVM-Based RISC-V Binary Translator](https://pulp-platform.org/docs/Banshee_ICCAD_2021.pdf?fbclid=IwAR0RzIDLto_-bNwb0w8FSCVlJ32VrIUMbV5qNzvEoDkHKVg8F3j6dZqrXvg)
+
+- **Question 1:** 文中分三種 Simulator? 哪三種
+  - **Answer:**
+    1. **Cycle-accurate**
+       - Verilator[7], Questa Advanced Simulator[8]
+       - Very slow for large systems (tens of kIPS)
+
+    2. **Event-based**
+       - gem5[9], GVSoC[10]
+       - Few MIPS, still too slow
+
+    3. **Functional**
+       - QEMU[11,12], rv8[13], R2VM[24]
+       - Few GIPS, but only for a handful of cores
+
+**None are well-suited for manycore!**
+
+- **Question 2:** What strategy Banshee take?
+  - **Answer:**
+
+    (Banshee is a functional emulator)
+
+    1. Static binary translation
+    2. RISC-V binary &rarr; \[Binary to IR Translator\] &rarr; LLVM IR &rarr; Opt
+       &rarr; \[IR to Host Translator\] &rarr;
+
+    3. Emulation: Using host's parallism
+
+- **Question 3:** What evaluation is done?
+  - **Answer:**
+    1. performance estimation
+    2. Benchmark: LFSR (Compute bound)
+    3. With or without ISA extensions
+        - Floating-point repetition
+        - (Indirect) Stream Semantic Registers (Xssr & Xissr)
+    4. Scaling with manticore
+    5. Scaling with MemPool
+    6. Comparrison to related work
+    7. Latency modeling
+
+- **Question 4:** Single thread binary how to scale with multicore?
+  - **Answer:**
+    - NYI
