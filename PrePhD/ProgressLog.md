@@ -142,6 +142,8 @@ Jserv: 你要先了解模擬器的類型
 
 ### [Banshee: A Fast LLVM-Based RISC-V Binary Translator](https://pulp-platform.org/docs/Banshee_ICCAD_2021.pdf?fbclid=IwAR0RzIDLto_-bNwb0w8FSCVlJ32VrIUMbV5qNzvEoDkHKVg8F3j6dZqrXvg)
 
+Github Link -- [[link]](https://github.com/pulp-platform/banshee)
+
 - **Question 1:** 文中分三種 Simulator? 哪三種
   - **Answer:**
     1. **Cycle-accurate**
