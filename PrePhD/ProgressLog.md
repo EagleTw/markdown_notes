@@ -205,14 +205,13 @@ Github Link -- [[link]](https://github.com/pulp-platform/banshee)
 DBT 其中一種技巧叫 Region Formation Technique (RFT) - Region formation is the process of dividing the binary code into segments or blocks, referred to as regions, based on certain criteria.
 
 - **Question 1:** What are the contributions?
+
   - **Answer:**
-      1. Show that it is possible to perform a high-quality translation of RISC-V binaries to x86 and ARM
-      2. Compare the performance of their SBT with performance of other RISC-V emulators and argue that **there is a lot of room for performce improvements.**
-
-- **Question 2:**
-
+    1. Show that it is possible to perform a high-quality translation of RISC-V binaries to x86 and ARM
+    2. Compare the performance of their SBT with performance of other RISC-V emulators and argue that **there is a lot of room for performce improvements.**
 
 - **Related work**
+
   - OpenISA
   - RISC-V Emulators
     - Spike (RISC-V Foundation)
@@ -223,8 +222,48 @@ DBT 其中一種技巧叫 Region Formation Technique (RFT) - Region formation is
     - RV8 (3.16x slower than nativ)
     - QEMU (7x slower)
 
-- **Question 3:** How to achieve RISC-V SBT?
+- **Question 2:** How to achieve RISC-V SBT?
+
   - **Answer:**
-  
+
   ![RISC_V SBT Archetechure](../Images/RISC-V_SBT-archetechure.jpg)
 
+  Steps
+
+  1. Read RISC-V executable
+  2. Disassemble each instruction with LLVM libraries
+  3. Translate to LLVM IR
+  4. LLVM to x86 or ARM assembly code
+  5. use standard assembly linker (GNU ld)
+
+- **Question 3** 這篇文章給我什麼樣的啟發?
+  - 有沒有可能，可以透過 AI based 的 Static / Dynamic Compilation，可以使 RISC-V Emualtor 加速
+
+### YiPing 延伸閱讀
+
+[GCC 和 LLVM 发家历史？两大开源编译器的爱恨情仇【AI 编译器】系列第二篇](https://www.youtube.com/watch?v=9r2B4BeHmm0&t=4s)
+
+[LLVM 架构了解下？为什么 LLVM 这么火？一起初体验实操 LLVM【AI 编译器】系列第四篇](https://www.youtube.com/watch?v=GgkwF24uWMA)
+
+- LLVM
+
+  - lib based llvm
+  - llvm 現在是超級巨大 Compiler tools 的工具箱
+
+- LLVM Flow
+
+  - [Frontend] &rarr; IR &rarr; [Optimizer] &rarr; IR &rarr; [Code Gen] &rarr; executable
+  - `test.c` &rarr; `test.c`(預處理文件) &rarr; `test.ll` + `test.bc`(llvm bytecode) &rarr; `test.s`(Assembly) &rarr; `test.o` &rarr; executable
+  - 動手做
+
+    ```bash
+    clang -E hello.c -o hello.i # run preprocessor
+    clang -emit-llvm hello.i -c -o hello.bc # to llvm IR binary
+    clang -emit-llvm hello.i -c -S hello.ll # to llvm IR human readable
+    llc hello.ll -o hello.s # to assembly
+    clang hello.s -o hello  # to executable
+    ```
+
+[LLVM IR详解！LLVM编译器的核心理念来啦！【AI编译器】系列第五篇(上)](https://www.youtube.com/watch?v=uvGDelc6Ka4)
+
+[LLVM后端代码生成！了解下基于LLVM的项目！【AI编译器】系列第五篇(下)](https://www.youtube.com/watch?v=ZcFdS1pOvyA&t=26s)
