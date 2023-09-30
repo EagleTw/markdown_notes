@@ -46,9 +46,10 @@
           - **Answer:** One of the frameworks for DBM is MAMBO.
 
         - "Dynamic Binary Modification" 會降低執行效率，為什麼還值得做?
+
           - **Answer:**
 
-            >Jserv: 因為某些指令序列的執行成本更高
+            > Jserv: 因為某些指令序列的執行成本更高
 
   - **Question 3:** What is the purpose of jump trampolines and how do they affect performance?
 
@@ -145,12 +146,16 @@ Jserv: 你要先了解模擬器的類型
 Github Link -- [[link]](https://github.com/pulp-platform/banshee)
 
 - **Question 1:** 文中分三種 Simulator? 哪三種
+
   - **Answer:**
+
     1. **Cycle-accurate**
+
        - Verilator[7], Questa Advanced Simulator[8]
        - Very slow for large systems (tens of kIPS)
 
     2. **Event-based**
+
        - gem5[9], GVSoC[10]
        - Few MIPS, still too slow
 
@@ -161,6 +166,7 @@ Github Link -- [[link]](https://github.com/pulp-platform/banshee)
 **None are well-suited for manycore!**
 
 - **Question 2:** What strategy Banshee take?
+
   - **Answer:**
 
     (Banshee is a functional emulator)
@@ -172,12 +178,13 @@ Github Link -- [[link]](https://github.com/pulp-platform/banshee)
     3. Emulation: Using host's parallism
 
 - **Question 3:** What evaluation is done?
+
   - **Answer:**
     1. performance estimation
     2. Benchmark: LFSR (Compute bound)
     3. With or without ISA extensions
-        - Floating-point repetition
-        - (Indirect) Stream Semantic Registers (Xssr & Xissr)
+       - Floating-point repetition
+       - (Indirect) Stream Semantic Registers (Xssr & Xissr)
     4. Scaling with manticore
     5. Scaling with MemPool
     6. Comparrison to related work
@@ -186,3 +193,38 @@ Github Link -- [[link]](https://github.com/pulp-platform/banshee)
 - **Question 4:** Single thread binary how to scale with multicore?
   - **Answer:**
     - NYI
+
+## 2023/09/30 (Sat.)
+
+### Reading nots:
+
+#### **Towards a High-Performace RISC-V Emulator**
+
+- RISC-V 目前可以用的 Emulator 不多，想要最快，所以使用 DBT (Dynamic Binary Translation) / SBT (Static Binary Translation)。
+
+DBT 其中一種技巧叫 Region Formation Technique (RFT) - Region formation is the process of dividing the binary code into segments or blocks, referred to as regions, based on certain criteria.
+
+- **Question 1:** What are the contributions?
+  - **Answer:**
+      1. Show that it is possible to perform a high-quality translation of RISC-V binaries to x86 and ARM
+      2. Compare the performance of their SBT with performance of other RISC-V emulators and argue that **there is a lot of room for performce improvements.**
+
+- **Question 2:**
+
+
+- **Related work**
+  - OpenISA
+  - RISC-V Emulators
+    - Spike (RISC-V Foundation)
+      - Iterpreted simulator, 15x to 75x slower than native
+    - ANGEL (Javascript RV64 simulator)
+  - RISC-V DBT Engines
+    - Pydgin (3.3x to 4x slower than native)
+    - RV8 (3.16x slower than nativ)
+    - QEMU (7x slower)
+
+- **Question 3:** How to achieve RISC-V SBT?
+  - **Answer:**
+  
+  ![RISC_V SBT Archetechure](../Images/RISC-V_SBT-archetechure.jpg)
+
