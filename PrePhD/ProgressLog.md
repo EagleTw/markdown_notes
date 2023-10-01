@@ -243,7 +243,7 @@ DBT 其中一種技巧叫 Region Formation Technique (RFT) - Region formation is
 
 [GCC 和 LLVM 发家历史？两大开源编译器的爱恨情仇【AI 编译器】系列第二篇](https://www.youtube.com/watch?v=9r2B4BeHmm0&t=4s)
 
-[LLVM 架构了解下？为什么 LLVM 这么火？一起初体验实操 LLVM【AI 编译器】系列第四篇](https://www.youtube.com/watch?v=GgkwF24uWMA)
+#### [LLVM 架构了解下？为什么 LLVM 这么火？一起初体验实操 LLVM【AI 编译器】系列第四篇](https://www.youtube.com/watch?v=GgkwF24uWMA)
 
 - LLVM
 
@@ -264,6 +264,136 @@ DBT 其中一種技巧叫 Region Formation Technique (RFT) - Region formation is
     clang hello.s -o hello  # to executable
     ```
 
-[LLVM IR详解！LLVM编译器的核心理念来啦！【AI编译器】系列第五篇(上)](https://www.youtube.com/watch?v=uvGDelc6Ka4)
+#### [LLVM 编译器前端和优化层了解下？词法语法分析、Pass 优化都在这！【AI 编译器】系列第五篇(中)](https://www.youtube.com/watch?v=NK3jU7K2nhg&list=PLuufbYGcg3p776cFHgF0KBVH0dyFOV6m_&index=7)
 
-[LLVM后端代码生成！了解下基于LLVM的项目！【AI编译器】系列第五篇(下)](https://www.youtube.com/watch?v=ZcFdS1pOvyA&t=26s)
+**TODO**未讀
+
+#### [LLVM IR 详解！LLVM 编译器的核心理念来啦！【AI 编译器】系列第五篇(上)](https://www.youtube.com/watch?v=uvGDelc6Ka4)
+
+主要在說 LLVM IR
+
+```c
+/* hello.c */
+#include <stdio.h>
+
+int main() {
+    int a = 3 + 4 - 5;
+    printf("Hello world! %d\n", a);
+    return 0;
+}
+```
+
+```llvm
+; ModuleID = 'hello.c'
+source_filename = "hello.c"
+target datalayout = "e-m:o-i64:64-i128:128-n32:64-S128"
+target triple = "arm64-apple-macosx13.0.0"
+
+@.str = private unnamed_addr constant [17 x i8] c"Hello world! %d\0A\00", align 1
+
+; Function Attrs: noinline nounwind optnone ssp uwtable(sync)
+define i32 @main() #0 {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  store i32 0, ptr %1, align 4
+  store i32 2, ptr %2, align 4
+  %3 = load i32, ptr %2, align 4
+  %4 = call i32 (ptr, ...) @printf(ptr noundef @.str, i32 noundef %3)
+  ret i32 0
+}
+
+declare i32 @printf(ptr noundef, ...) #1
+
+attributes #0 = { noinline nounwind optnone ssp uwtable(sync) "frame-pointer"="non-leaf" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="apple-m1" "target-features"="+aes,+crc,+crypto,+dotprod,+fp-armv8,+fp16fml,+fullfp16,+lse,+neon,+ras,+rcpc,+rdm,+sha2,+sha3,+sm4,+v8.1a,+v8.2a,+v8.3a,+v8.4a,+v8.5a,+v8a,+zcm,+zcz" }
+attributes #1 = { "frame-pointer"="non-leaf" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="apple-m1" "target-features"="+aes,+crc,+crypto,+dotprod,+fp-armv8,+fp16fml,+fullfp16,+lse,+neon,+ras,+rcpc,+rdm,+sha2,+sha3,+sm4,+v8.1a,+v8.2a,+v8.3a,+v8.4a,+v8.5a,+v8a,+zcm,+zcz" }
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+!llvm.ident = !{!4}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 8, !"PIC Level", i32 2}
+!2 = !{i32 7, !"uwtable", i32 1}
+!3 = !{i32 7, !"frame-pointer", i32 1}
+!4 = !{!"Homebrew clang version 16.0.6"}
+```
+
+![LLVM IR Archetecture](../Images/llvm_ir_archetechure.png)
+
+說明：
+
+1. `;` is means comment
+2. `@` is global, `%` is local
+3. `alloca` means allocate memory
+4. `i32` means 32bit (4 byte)
+5. `align` means 位元對齊
+6. `store` is write
+7. `load` is read
+
+特性：
+
+1. 靜態單賦值 (Static Single Assignment, SSA)
+
+   - 三地址方式
+   - 暫存器的數量是無限制的
+
+   Example: `1 * 2 + 3`
+
+   ```llvm
+   %0 = mul i32 1, 2
+   %1 = add i32 %0, 3
+   ret i32 %1
+   ```
+
+   好處：
+
+   1. 可以反向追 IR
+   2. SSA 建立 use-def list
+
+2. IR is stored to disk
+
+程式碼 Keywords：
+
+1. modules, function, basicbocks, instructions
+2. value, use, user
+
+#### [LLVM 后端代码生成！了解下基于 LLVM 的项目！【AI 编译器】系列第五篇(下)](https://www.youtube.com/watch?v=ZcFdS1pOvyA&t=26s)
+
+LLVM Backend
+
+![LLVM backend pass](../Images/llvm_backend_pass.png)
+
+- Instruction Selection
+
+  - 把 LLVM IR 轉成 SelectionDAG node
+  - Every DAG can represent a basic block calculation
+  - Define instruction dependencies
+  - 基於 DAG，我們可以建樹（有不同的模式）
+
+- 第一次 Instruction Scheduling (pre register allocation)
+
+  - 對 Instruction 排序，盡可能可以平行
+  - Instruction 轉成 MachineInstr 三地址表示
+
+- Register Allocation
+
+  - 把無限的 Register 轉成有限的 Target registers
+  - Register 不足時 "Spill" 到 Memory 中
+
+- 第二次 Instruction Scheduling (post register allocation)
+
+- Code Emission
+  - MachineInstr &rarr; MCInst &rarr; binary
+
+AI Compiler
+
+- XLA
+- JAX
+- Tensorflow
+- TVM
+- Julia LLVM JIT
+
+### [为什么需要AI编译器？跟传统编译器啥关系吗？【AI编译器】系列第一篇](https://www.youtube.com/watch?v=i5_BptwCBHA&list=PLuufbYGcg3p776cFHgF0KBVH0dyFOV6m_&index=8)
+
+- **Question 1:** Why need AI compiler?
+  - The gap between SW and HW is huge
+  - New operators have emererged, optimization for hardware is difficult
