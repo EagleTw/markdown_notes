@@ -397,3 +397,9 @@ AI Compiler
 - **Question 1:** Why need AI compiler?
   - The gap between SW and HW is huge
   - New operators have emererged, optimization for hardware is difficult
+
+## 2023/10/08 rv32jit 踩坑筆記
+
+1. 忘記 mac m1 utm 應該下載 x86 (amd86) 的 iso 所以 compile 不會過
+2. 安裝完 amd86 ubuntu 要去 utm 設定可使用用的 core 數量
+3. 安裝 nvim, nodejs, clang + llvm, c++20 library
