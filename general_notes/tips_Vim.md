@@ -31,7 +31,7 @@
 | <ctrl> + i     | 去下一個位置                                   |
 | [[             | Jump to begin of function                      |
 | ]]             |                                                |
-| `0 |`          | Go to the first column                         |
+| `0 \|`          | Go to the first column                         |
 | `dw`           | delete the white space till the firt character |
 
 | 指令 | 說明             |
