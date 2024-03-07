@@ -1,11 +1,11 @@
-
 # Improve Code Quality
 
-* Use meaningfull nameing
-  * [Google Coding Style Naming](https://google.github.io/styleguide/cppguide.html#Naming)
-  * File Name
-    * `name_like_this.cpp`
-  * Type Name
+- Use meaningfull nameing
+
+  - [Google Coding Style Naming](https://google.github.io/styleguide/cppguide.html#Naming)
+  - File Name
+    - `name_like_this.cpp`
+  - Type Name
 
     ```C++
     // classes and structs
@@ -23,16 +23,18 @@
     enum class UrlTableError { ...
     ```
 
-  * Variable Name
-    * Common Variable Name
+  - Variable Name
+
+    - Common Variable Name
 
       ```C++
       std::string table_name;  // OK - lowercase with underscore.
       std::string tableName;   // Bad - mixed case.
       ```
 
-    * Class Data Members
-      * with a ***trailing underscore***
+    - Class Data Members
+
+      - with a **_trailing underscore_**
 
         ```C++
         class TableInfo {
@@ -43,13 +45,13 @@
         };
         ```
 
-    * Struct Data Members
-      * DONT need underscore
+    - Struct Data Members
+      - DONT need underscore
 
-  * Constant Names
-    * Leading with k...
-    * Example: `const int kDaysInAWeek = 7;`
-  * Enumerator Names
+  - Constant Names
+    - Leading with k...
+    - Example: `const int kDaysInAWeek = 7;`
+  - Enumerator Names
 
     ```C++
     enum class UrlTableError {
@@ -59,22 +61,23 @@
     };
     ```
 
-  * Function
-    * With mix cases
-    * Example: `AddOne()`, `CheckSum`
-  * Macro Names
-    * In general, **it should not be used**
+  - Function
+    - With mix cases
+    - Example: `AddOne()`, `CheckSum`
+  - Macro Names
+
+    - In general, **it should not be used**
 
     ```C++
     #define ROUND(x) ...
     #define PI_ROUNDED 3.0
     ```
-  * Comments
-    * File comments
-    * Class comments
-    * Function comment
-    * Variable comments
-      * Global variable
-      * Class Data Members
-    * Implementation Comments
 
+  - Comments
+    - File comments
+    - Class comments
+    - Function comment
+    - Variable comments
+      - Global variable
+      - Class Data Members
+    - Implementation Comments

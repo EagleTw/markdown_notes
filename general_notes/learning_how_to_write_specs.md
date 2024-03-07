@@ -2,13 +2,13 @@
 
 Goal
 
-* Improve create, review, use specs
-* Articulate your idea
+- Improve create, review, use specs
+- Articulate your idea
 
 ## Introduction
 
-* Writing is critical in waterflow or agile
-* May projects fail because they do no specify properly what the system should do. In fact may projects have just ... a vague notion of what the system should do.
+- Writing is critical in waterflow or agile
+- May projects fail because they do no specify properly what the system should do. In fact may projects have just ... a vague notion of what the system should do.
 
 ## Lesson 1: The need of writing specs
 
@@ -29,14 +29,14 @@ Make spec easy to understand.
 
 Always consider Audiences (Write out your audience)
 
-* Who
-* What should does the audiendce need?
-* How to I write?
+- Who
+- What should does the audiendce need?
+- How to I write?
 
 ## Lesson 3: A structured approach to edit specs (Spec templates)
 
-* Start with spec templates in sharepoint
-* How detail should the spec need
+- Start with spec templates in sharepoint
+- How detail should the spec need
 
   | detailed                 | short             |
   | ------------------------ | ----------------- |
@@ -46,12 +46,10 @@ Always consider Audiences (Write out your audience)
   | High risks               | little risks      |
   | with other parts of code | independent code  |
 
-* If the sections is not needed, just type: N/A, or remove it
-* **Do not use old specs as template as new specs**
-  * Use spec templates
+- If the sections is not needed, just type: N/A, or remove it
+- **Do not use old specs as template as new specs**
+  - Use spec templates
 
 ## Lesson 4: Proof-reading your specs
 
 ## Lesson 5: Tools
-
-

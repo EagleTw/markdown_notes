@@ -6,15 +6,15 @@
 
 ## 編輯模式
 
- | 指令  | 說明                                   |
- | ----- | -------------------------------------- |
- | i     | 在游標位置進入編輯模式                 |
- | a     | 在游標位置後進入編輯模式               |
- | A     | 在游標行的最後一個字元進入編輯模式     |
- | I     | 在游標行的第一個非空白字元進入編輯模式 |
- | o     | 向下新增一行，並進入編輯模式           |
- | O     | 向上新增一行，並進入編輯模式           |
- | [ESC] | 取消指令或退出編輯模式                 |
+| 指令  | 說明                                   |
+| ----- | -------------------------------------- |
+| i     | 在游標位置進入編輯模式                 |
+| a     | 在游標位置後進入編輯模式               |
+| A     | 在游標行的最後一個字元進入編輯模式     |
+| I     | 在游標行的第一個非空白字元進入編輯模式 |
+| o     | 向下新增一行，並進入編輯模式           |
+| O     | 向上新增一行，並進入編輯模式           |
+| [ESC] | 取消指令或退出編輯模式                 |
 
 ## 游標移動
 
@@ -31,15 +31,14 @@
 | <ctrl> + i     | 去下一個位置                                   |
 | [[             | Jump to begin of function                      |
 | ]]             |                                                |
-| `0 \|`          | Go to the first column                         |
+| `0 \|`         | Go to the first column                         |
 | `dw`           | delete the white space till the firt character |
 
 | 指令 | 說明             |
-| ---- |:---------------- |
+| ---- | :--------------- |
 | gd   | Go to definition |
 | gt   | go to next tab   |
-|:qa   | quit all         |
-
+| :qa  | quit all         |
 
 ## 多行註解
 
@@ -68,8 +67,8 @@ Github: [vim-addon-manager ](https://github.com/MarcWeber/vim-addon-manager)
 只要安裝
 `sudo aptitude install vim-addon-manager vim-scripts`
 然後
-`vim-addons install enhanced-commentify`  
-  
+`vim-addons install enhanced-commentify`
+
 接著就可以很輕鬆的操作
 "\x" (反斜線+x)
 你就會發現這些文字全部被註解掉了！
@@ -81,31 +80,31 @@ Github: [vim-addon-manager ](https://github.com/MarcWeber/vim-addon-manager)
 
 ## Flags for Search and Replace
 
-* `g` replace all occurrences within line
-* `c` ask for confirmation before each replacement
-* `i` ignore case for searchpattern
-* `I` don't ignore case for searchpattern
+- `g` replace all occurrences within line
+- `c` ask for confirmation before each replacement
+- `i` ignore case for searchpattern
+- `I` don't ignore case for searchpattern
 
 ### Pattern atom
 
-* `^ start matching from beginning of a line
-  * `/^` This match This only at beginning of line
-* `$` match pattern should terminate at end of a line
-  * `/)`$ match ) only at end of line
-  * `/^$` match empty line
-* `.` match any single character, excluding new line
-  * `/c.t` match 'cat' or 'cot' or 'c2t' or 'c^t' but not 'cant'
+- `^ start matching from beginning of a line
+  - `/^` This match This only at beginning of line
+- `$` match pattern should terminate at end of a line
+  - `/)`$ match ) only at end of line
+  - `/^$` match empty line
+- `.` match any single character, excluding new line
+  - `/c.t` match 'cat' or 'cot' or 'c2t' or 'c^t' but not 'cant'
 
 For more info, :h pattern-atoms
 
 ### Pattern Qualifiers
 
-* `*` greedy match preceding character 0 or more times
-  * `/abc*`` match 'ab' or 'abc' or 'abccc' or 'abcccccc' etc
-* `\+` greedy match preceding character 1 or more times
-  * `/abc\+` match 'abc' or 'abccc' but not 'ab'
-* `\?` match preceding character 0 or 1 times (\= can also be used)
-  * `/abc\?` match 'ab' or 'abc' but not 'abcc'
+- `*` greedy match preceding character 0 or more times
+  - `/abc\*`` match 'ab' or 'abc' or 'abccc' or 'abcccccc' etc
+- `\+` greedy match preceding character 1 or more times
+  - `/abc\+` match 'abc' or 'abccc' but not 'ab'
+- `\?` match preceding character 0 or 1 times (\= can also be used)
+  - `/abc\?` match 'ab' or 'abc' but not 'abcc'
 
 For more info, `:h pattern-overview`
 
@@ -117,9 +116,9 @@ For more info, `:h /character-classes`
 
 在 VIM normal mode 中輸入
 
-* `:% s/^/#/g`   在全部內容的行首添加 # 號註解 
-* `:1,10 s/^/#/g`   在1~10 行首添加 # 號註解
-* `:%s/-.*//g` 刪除全部的 "-abcd1234" Option
-* `:%s/\<foo\>//g`On each line, delete all occurrences of the whole word "foo".
-* `:%s/^\s*//g` Clear all white space in the begin
-* `:%s/\d\{2}//g`
+- `:% s/^/#/g` 在全部內容的行首添加 # 號註解
+- `:1,10 s/^/#/g` 在1~10 行首添加 # 號註解
+- `:%s/-.*//g` 刪除全部的 "-abcd1234" Option
+- `:%s/\<foo\>//g`On each line, delete all occurrences of the whole word "foo".
+- `:%s/^\s*//g` Clear all white space in the begin
+- `:%s/\d\{2}//g`

@@ -1,5 +1,3 @@
 # Tips emacs
 
-
-* `C-c h t` Emacs tutorial
-
+- `C-c h t` Emacs tutorial
